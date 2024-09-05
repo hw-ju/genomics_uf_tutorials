@@ -19,7 +19,7 @@ declare -a column2
 
 # read the pairs columns file and populate the arrays
 while IFS=$'\t' read -r col1 col2; do
-    # dont read in empty lines
+    # don't read in empty lines
     if [ -z "$col1" ] || [ -z "$col2" ]; then
         continue
     fi
@@ -39,10 +39,11 @@ get_from_col2() {
     echo "${column2[$index]}"
 }
 
-
 # get pair values
-result_genom=$(get_from_col1 "${$SLURM_ARRAY_TASK_ID}")
-result_somat=$(get_from_col2 "${$SLURM_ARRAY_TASK_ID}")
+result_genom=$(get_from_col1 "$SLURM_ARRAY_TASK_ID")
+result_somat=$(get_from_col2 "$SLURM_ARRAY_TASK_ID")
+
+date;hostname;pwd
 
 date;hostname;pwd
 
