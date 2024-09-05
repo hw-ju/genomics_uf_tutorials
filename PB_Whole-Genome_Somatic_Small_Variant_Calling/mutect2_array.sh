@@ -45,8 +45,6 @@ result_somat=$(get_from_col2 "$SLURM_ARRAY_TASK_ID")
 
 date;hostname;pwd
 
-date;hostname;pwd
-
 module load parabricks/4.3.1
 
 # Set file paths
